@@ -21,3 +21,42 @@ const hamburger = document.getElementById('hamburger');
             hamburger.classList.add('fa-bars');
         });
     });
+
+
+
+
+    document.getElementById("messageForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+  
+  const statusDiv = document.getElementById("formStatus");
+  const button = this.querySelector("button");
+  
+  statusDiv.innerHTML = '<p style="color: orange;">Sending...</p>';
+  button.disabled = true;
+
+  fetch("https://formspree.io/f/mbdypwky", {
+    method: "POST",
+    body: new FormData(this),
+    headers: {
+      'Accept': 'application/json'
+    }
+  })
+  .then(response => {
+    if (response.ok) {
+      statusDiv.innerHTML = '<p style="color: green;">Thanks for your message! Akintunde will get back to you shortly.</p>';
+      this.reset();
+      
+
+      setTimeout(() => {
+        statusDiv.innerHTML = '';
+      }, 5000);
+    } else {
+      statusDiv.innerHTML = '<p style="color: red;">Something went wrong. Please try again.</p>';
+    }
+    button.disabled = false;
+  })
+  .catch(error => {
+    statusDiv.innerHTML = '<p style="color: red;">Something went wrong. Please try again.</p>';
+    button.disabled = false;
+  });
+});
