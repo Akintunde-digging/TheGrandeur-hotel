@@ -5,6 +5,13 @@
       margin: 0;
       padding: 0;
     }
+    * {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  *::-webkit-scrollbar {
+    display: none; 
+  }
     html{
     font-family: 'Nunito', sans-serif;
     box-sizing: border-box;
@@ -15,6 +22,8 @@
       line-height: 1.6;
       color: white;
       background-color: #1c1c1c;
+      padding: 0;
+      padding-left: 10px;
     }
     section {
       padding: 60px 0;
