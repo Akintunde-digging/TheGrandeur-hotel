@@ -73,14 +73,16 @@
     <section class="booking" id="booking">
         <div class="request_booking">
             <h2>Request a Booking</h2>
-            <form>
-                <input type="text" placeholder="Full Name" required>
-                <input type="email" placeholder="Email Address" required>
+            <form id="messageForm">
+                <input type="text" name="text" placeholder="Full Name" required>
+                <input type="email" name="email" placeholder="Email Address" required>
                 <label for="date" id="contact">Check-in date</label>
-                <input type="date" placeholder="from" required>
+                <input type="date" name="date" placeholder="from" required>
                 <label for="date">Check-out date</label>
-                <input type="date" placeholder="to" required>
+                <input type="date" name="date" placeholder="to" required>
+                <div id="formStatus">
                 <div class="form_button"><button type="submit">Submit Request</button></div>
+                </div>
             </form>
         </div>
         <div class="contact">
