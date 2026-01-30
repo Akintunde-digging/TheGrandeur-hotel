@@ -23,7 +23,6 @@
       color: white;
       background-color: #1c1c1c;
       padding: 0;
-      padding-left: 20px;
     }
     section {
       padding: 60px 0;
@@ -41,7 +40,7 @@
         justify-content: space-between;
         align-items: center;
         padding: 20px;
-        border-bottom: 3px solid rgba(139, 139, 139, 0.096);
+        
         position: relative;
         z-index: 1000;
     }
@@ -173,7 +172,7 @@
     .feats{
         border: 1px solid white;
         border-radius: 8px;
-        padding: 20px 120px;
+        padding: 25px 80px;
     }
     .rooms{
         display: flex;
@@ -203,7 +202,7 @@
         border: 1px solid white;
         background-color: black;
         border-radius: 10px;
-        padding: 50px 50px;
+        padding: 30px 80px;
     }
     .rooms button{
         font-size: 16px;
@@ -249,7 +248,7 @@
     }
     .booking button{
         font-size: 16px;
-        padding: 18px 160px;
+        padding: 18px 120px;
         border:none;
         border-radius: 7px;
         background-color: red;
@@ -263,7 +262,7 @@
     display: flex;
     flex-direction: column;
     gap: 15px;
-    padding: 10px 70px;
+    padding: 10px 40px;
     }
     .contact_details{
         align-items: center;
@@ -287,6 +286,9 @@
         font-size: 12px;
     }
     @media (min-width: 768px){
+        nav{
+            border-bottom: 3px solid rgba(139, 139, 139, 0.096);
+        }
         .nav-right{
             display: none;
         }
@@ -338,4 +340,3 @@
             padding-left: 250px;
         }
     }
-
