@@ -43,7 +43,7 @@ const hamburger = document.getElementById('hamburger');
   })
   .then(response => {
     if (response.ok) {
-      statusDiv.innerHTML = '<p style="color: green;">Thanks for your message! Akintunde will get back to you shortly.</p>';
+      statusDiv.innerHTML = '<p style="color: green;">Thanks for your booking request! We will get back to you shortly.</p>';
       this.reset();
       
 
@@ -95,3 +95,4 @@ function goToSlide(n) {
 setInterval(() => {
     changeSlide(1);
 }, 3000);
+
