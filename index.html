@@ -24,13 +24,26 @@
 
     <section class="hero_section" id="home">
         <div class="hero">
-            <img src="bed.jpg" alt="">
-            <div class="overlay">
-                <div class="overlay-text">
-                    <h1>THE GRANDEUR HOTEL</h1>
-                    <p>Comfort. Style. Grand Living.</p>
-                    <a href="#booking"><button>Book a Room</button></a>
+            <div class="slides">
+                <div class="slide active"><img src="bed.jpg" alt="hero section bed"></div>
+                <div class="slide"><img src="seaview.jpg" alt=""></div>
+                <div class="slide"><img src="poolview.jpg" alt=""></div>
+                <div class="overlay">
+                    <div class="overlay-text">
+                        <h1>THE GRANDEUR HOTEL</h1>
+                        <p>Comfort. Style. Grand Living.</p>
+                        <a href="#booking"><button>Book a Room</button></a>
+                    </div>
                 </div>
+            </div>
+
+            <button class="sliderButton prev" onclick="changeSlide(-1)">❮</button>
+            <button class="sliderButton next" onclick="changeSlide(1)">❯</button>
+        
+            <div class="sliderDots">
+                <span class="dot active" onclick="goToSlide(0)"></span>
+                <span class="dot" onclick="goToSlide(1)"></span>
+                <span class="dot" onclick="goToSlide(2)"></span>
             </div>
         </div>
     </section>
